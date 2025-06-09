@@ -18,7 +18,7 @@ Two Types of Languages
 -- Example - C, C++
 
 V8 JS Engine
-Javascript is both interpreted and compiled language.
+Javascript uses combination of both interpreted and compiled languages.
 It has an interpreter as well as a compiler.
 It uses Just In Time compilation.
 

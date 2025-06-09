@@ -1,7 +1,7 @@
 const fs = require("fs");
 const https = require("https");
 
-var file = fs.readFileSync("./episode07_file.txt", "utf-8");
+var file = fs.readFileSync("./file.txt", "utf-8");
 console.log("Finished reading file synchronously", file);
 
 console.log("Hello World");
@@ -25,7 +25,7 @@ setTimeout(() => {
   console.log("setTimeout called after 5 seconds");
 }, 5000);
 
-fs.readFile("./episode07_file.txt", "utf-8", (err, data) => {
+fs.readFile("./file.txt", "utf-8", (err, data) => {
   console.log("File Data: ", data);
 });
 
