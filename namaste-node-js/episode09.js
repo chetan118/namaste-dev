@@ -7,6 +7,7 @@ Lib.uv
 -- When the JS engine's call stack is empty (JS engine is idle/main thread is not blocked)
 and there are tasks waiting to be executed in the callback queues
 the event loop gives one of the tasks from the callback queues to the JS engine's call stack
+at an appropriate time and in correct order of priority
 -- It has a mechanism to prioritize the tasks in the callback queues
 -- Event loop keeps running in phases
 -- Each phase has its own queue
@@ -27,7 +28,14 @@ b. and then it checks if there are any promise callbacks
 // https.get("URL", cb); // 5 - poll phase
 -- When there are no callbacks in any of the phases, the event loop will come and wait in the "poll" phase.
 This is different from how it works in the browser. The event loop in the browser does not pause or wait, it keeps running
-
+-- Between Timers and Poll phase there are two more phases
+a. Pending callbacks
+If some callbacks are deferred to the next iteration, those are handled in the pending callbacks phase
+b. Idle, Prepare
+Only used internally by lib.uv
+-- Before going into the poll phase, libuv calculates the time it can stay in the poll phase
+--- to calculate this it checks the quickest expiring setTimeout operation
+--- if there are three setTimeouts of 5, 7 and 10 secs, Lib.uv will set the poll phase timeout to 5 secs
 
 2. Thread Pool
 
