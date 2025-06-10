@@ -37,7 +37,7 @@ Only used internally by lib.uv
 --- to calculate this it checks the quickest expiring setTimeout operation
 --- if there are three setTimeouts of 5, 7 and 10 secs, Lib.uv will set the poll phase timeout to 5 secs
 
-2. Thread Pool
+2. Thread Pool - in episode10.js
 
 3. Callback Queues
 -- there is a separate queue for timers, separate queue for api calls, etc 
