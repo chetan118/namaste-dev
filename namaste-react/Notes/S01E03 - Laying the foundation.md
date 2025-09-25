@@ -10,6 +10,7 @@
 - JSX Code => transpiled to React.createElement => returns ReactElement i.e. JS Object => on rendering HTMLElement
 - JSX attributes are camelCase
 - H.W. - image src, a href in JSX?
+- It sanitizes the data - prevents cross site scripting attacks
 
 ## Components
 
