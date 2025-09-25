@@ -14,6 +14,8 @@
 
 ## Components
 
+Everything inside React is a component.
+
 ### Class-based components
 
 - OLD
