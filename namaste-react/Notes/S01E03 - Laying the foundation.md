@@ -14,12 +14,19 @@
 ## Components
 
 ### Class-based components
+
 - OLD
 - Uses JS Classes
 
 ### Functional components
+
 - NEW
 - Uses JS Functions
 
 ## What is React Functional Component
+
 - Just a normal JS function which returns JSX i.e. a React Element
+
+## Component Composition
+
+- Calling a component inside another component
