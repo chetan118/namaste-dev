@@ -1,18 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
-const title = (
+// React Component
+const Title = () => (
   <h1 id="heading" className="heading" key="jsxHeading" tabIndex="5">
     Namaste React using JSX 🚀
   </h1>
 );
 
-// React Component Composition
-// Even if we got title from an api or sth, JSX will sanitize its value, prevents Cross site scripting attack
+// React Component Composition - Calling a component inside another component
+// Three ways of Component Composition
 const HeadingComponent = () => (
   <div id="container">
-    {title}
+    <Title />
+    <Title></Title>
+    {Title()}
     <h1>Namaste React Functional Component 🚀</h1>
   </div>
 );
