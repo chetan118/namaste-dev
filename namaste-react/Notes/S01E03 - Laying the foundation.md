@@ -10,3 +10,16 @@
 - JSX Code => transpiled to React.createElement => returns ReactElement i.e. JS Object => on rendering HTMLElement
 - JSX attributes are camelCase
 - H.W. - image src, a href in JSX?
+
+## Components
+
+### Class-based components
+- OLD
+- Uses JS Classes
+
+### Functional components
+- NEW
+- Uses JS Functions
+
+## What is React Functional Component
+- Just a normal JS function which returns JSX i.e. a React Element
