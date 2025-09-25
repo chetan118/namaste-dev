@@ -1,18 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const hello = React.createElement("h1", { id: "hello", key: "hello" }, "Hello World from React! 🚀"); // this is an object <ReactElement>
-const parent = React.createElement("div", { id: "parent" }, [
-  hello,
-  React.createElement("div", { id: "child1", key: "key1" }, [
-    React.createElement("h1", { key: "key11" }, "This is an H1 tag"),
-    React.createElement("h2", { key: "key12" }, "This is an H2 tag"),
-  ]),
-  React.createElement("div", { id: "child2", key: "key2" }, [
-    React.createElement("h1", { key: "key21" }, "This is an H1 tag"),
-    React.createElement("h2", { key: "key22" }, "This is an H2 tag"),
-  ]),
-]);
-console.log(parent); // this is an object <ReactElement>
+// React.createElement => return ReactElement i.e. JS Object => on rendering HTMLElement
+
+const heading = React.createElement("h1", { id: "heading", key: "heading" }, "Hello World from React! 🚀");
+console.log(heading);
+
+// JSX - JavaScript syntax to help with React
+// It is not HTML in JS
+// It is HTML-like or XML-like syntax
+// JS Engine will not understand this code as-is
+// Parcel uses Babel package to transpile the code to JS before it reaches the JS Engine
+// JSX Code => transpiled to React.createElement => return ReactElement i.e. JS Object => on rendering HTMLElement
+const jsxHeading = <h1 id="heading" key="jsxHeading">Namaste React using JSX 🚀</h1>;
+console.log(jsxHeading)
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+root.render(jsxHeading);

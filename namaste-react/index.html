@@ -7,16 +7,9 @@
     <title>Namaste React 🚀</title>
   </head>
   <body>
-    <h1>Before Root</h1>
     <div id="root">
-      <h1>Hello World! 🚀</h1> <!-- this gets replaceed by root.render(parent) method -->
+      <h1>Not Rendered...</h1> <!-- this gets replaceed by root.render(parent) method -->
     </div>
-    <h1>After Root</h1>
-    <script>
-      const jsHeading = document.createElement("h1");
-      jsHeading.innerHTML = "Hello World from Javascript! 🚀";
-      document.getElementById("root").appendChild(jsHeading);
-    </script>
     <script type="module" src="App.js"></script>
   </body>
 </html>
