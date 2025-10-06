@@ -8,3 +8,7 @@
 - Also optimizes the web page, so that things happen very fast
 
 ## React Hooks
+
+- Normal JS utility function - written by facebook devs in the react library
+- useState() - superpowerful state variables in React
+- useEffect()
