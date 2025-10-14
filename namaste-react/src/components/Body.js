@@ -16,9 +16,13 @@ const Body = () => {
     );
     const json = await res.json();
     setListOfRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  if (!listOfRestaurants || listOfRestaurants.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="body">
