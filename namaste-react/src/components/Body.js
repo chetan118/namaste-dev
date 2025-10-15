@@ -1,5 +1,6 @@
-import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
+import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // Local state variable - super powerful variable
@@ -21,7 +22,7 @@ const Body = () => {
   };
 
   if (!listOfRestaurants || listOfRestaurants.length === 0) {
-    return <div>Loading...</div>;
+    return <Shimmer />;
   }
 
   return (
