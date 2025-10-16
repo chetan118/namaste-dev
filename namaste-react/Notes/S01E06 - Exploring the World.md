@@ -41,3 +41,7 @@ Two approaches to fetch data and render
 2. Page loads -> Render UI -> API call made -> Re-render the app with the data
 
 In React, we'll always use the second approach.
+
+## Shimmer UI
+
+It is a new approach to show a shimmer page instead of a loader icon or loading text while the content is being fetched from an api. The shimmer page is highly similar to the content that is about to be loaded on to the page and gives an idea of the kind of content that will show up. This is much better UX than the loader icon or the loading text.
